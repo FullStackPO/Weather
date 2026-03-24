@@ -26,7 +26,7 @@ async function weather(city) {
             desc.innerText = data.weather[0].main;
         } 
         else {
-            alert(`No place found named "${city}"`);
+            alert(`No City found named "${city}"`);
         }
 
     } catch (err) {
@@ -46,3 +46,9 @@ function getWeather() {
 
     weather(city);
 }
+
+ecity.addEventListener('keypress', function(e){
+    if(e.key === 'Enter'){
+        getWeather();
+    }
+})
